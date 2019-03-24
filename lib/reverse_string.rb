@@ -1,3 +1,10 @@
+# Traverse the string backwards
+# Keep two pointers, one is the current position, one is the word's end
+# When you get to a blank space, append the substring from the pointer to the words end to the result
+# Update the pointer for the word's end
+# When finished traversing, you still have to add the first word. Since we're checking for blank spaces,
+#     the first world will never get appended to the result
+
 class ReverseString
   def self.run(str)
     result = ''

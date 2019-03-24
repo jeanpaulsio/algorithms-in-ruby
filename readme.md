@@ -9,3 +9,4 @@ $ ruby lib/reverse_string_test.rb
 ## Table of Contents
 
 1. [Clone Even Numbers](./lib/clone_even_numbers.rb)
+2. [Reverse String](./lib/reverse_string.rb)
