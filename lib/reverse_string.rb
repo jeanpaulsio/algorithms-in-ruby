@@ -1,4 +1,11 @@
-# Traverse the string backwards
+# Problem:
+# Write a function that reverse a string of words
+#
+# Given:  "foo bar baz quux"
+# Result: "quux baz bar foo"
+#
+# Explanation:
+# This will be done by traversing the string backwards
 # Keep two pointers, one is the current position, one is the word's end
 # When you get to a blank space, append the substring from the pointer to the words end to the result
 # Update the pointer for the word's end
