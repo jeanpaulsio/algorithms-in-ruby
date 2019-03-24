@@ -1,8 +1,9 @@
 A collection of classic computer science algorithms written in Ruby
 
+## Running Tests
+
 ```bash
-$ git clone https://github.com/jeanpaulsio/algorithms_in_ruby.git
-$ cd algorithms_in_ruby
+$ ruby lib/reverse_string_test.rb
 ```
 
 ## Table of Contents
