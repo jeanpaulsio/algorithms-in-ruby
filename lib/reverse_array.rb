@@ -1,5 +1,9 @@
 # Problem:
 # Given an array of items, reverse it in place
+#
+# Explanation:
+# Initialize two pointers, one at the start and one at the end
+# Swap the items at each pointer and increment / decrement respectfully
 
 class ReverseArray
   def self.run(arr)
