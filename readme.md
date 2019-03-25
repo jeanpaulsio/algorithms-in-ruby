@@ -14,3 +14,4 @@ $ ruby lib/reverse_string_test.rb
 4. [Two Sum](./lib/two_sum.rb)
 5. [Shortest Subarray Unsorted](./lib/shortest_subarray_unsorted.rb)
 6. [Dutch National Flag](./lib/dutch_national_flag.rb)
+7. [Move Zeroes to End](./lib/move_zeroes_to_end.rb)
