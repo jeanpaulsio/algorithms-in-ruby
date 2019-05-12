@@ -3,12 +3,6 @@
 #
 # Given:  [1, 2, 3, 4, -1, -1]
 # Result: [1, 2, 2, 3, 4, 4]
-#
-# Explanation:
-# Assume the array has enough space
-# Initialize two pointers, i and j where i is the last positive number and j is at arr.length
-# Traverse the array backwards and if arr[i] is even, set arr[j] to equal arr[i]
-# i and j are decremented on every pass and arr[j] is always set to arr[i]
 
 class CloneEvenNumbers
   def self.find_last_positive_number(arr)
