@@ -1,4 +1,4 @@
-require_relative '../test_helper'
+require_relative '../../test_helper'
 require_relative 'dutch_national_flag'
 
 class DutchNationalFlagTest < Minitest::Test

@@ -1,4 +1,4 @@
-require_relative '../test_helper'
+require_relative '../../test_helper'
 require_relative 'move_zeroes_to_end'
 
 class MoveZeroesToEndTest < Minitest::Test

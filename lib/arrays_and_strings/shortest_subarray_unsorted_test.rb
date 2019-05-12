@@ -1,4 +1,4 @@
-require_relative '../test_helper'
+require_relative '../../test_helper'
 require_relative 'shortest_subarray_unsorted'
 
 class ShortestSubarrayUnsortedTest < Minitest::Test

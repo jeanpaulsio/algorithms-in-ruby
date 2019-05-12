@@ -1,4 +1,4 @@
-require_relative '../test_helper'
+require_relative '../../test_helper'
 require_relative 'clone_even_numbers'
 
 class CloneEvenNumbersTest < Minitest::Test

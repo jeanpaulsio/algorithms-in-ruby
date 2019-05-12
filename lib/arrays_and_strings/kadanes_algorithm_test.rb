@@ -1,4 +1,4 @@
-require_relative '../test_helper'
+require_relative '../../test_helper'
 require_relative 'kadanes_algorithm'
 
 class KadanesAlgorithmTest < Minitest::Test

@@ -1,4 +1,4 @@
-require_relative '../test_helper'
+require_relative '../../test_helper'
 require_relative 'two_sum'
 
 class TwoSumTest < Minitest::Test
