@@ -8,6 +8,8 @@ $ ruby lib/reverse_string_test.rb
 
 ## Table of Contents
 
+### Arrays and Strings
+
 1. [Clone Even Numbers](./lib/clone_even_numbers.rb)
 2. [Reverse String](./lib/reverse_string.rb)
 3. [Reverse Array](./lib/reverse_array.rb)
@@ -19,3 +21,14 @@ $ ruby lib/reverse_string_test.rb
 9. Sliding Window
 10. Zero Sum Subarray
 11. Subarray Sum
+
+### Binary Search
+
+1. Binary Search
+2. First Duplicate
+3. Closest Element
+4. Search Insert Position
+5. Cyclically Sorted Min
+6. Find With Unknown Length
+7. Square Root of an Integer
+8. Find Array Peak
