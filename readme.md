@@ -15,7 +15,7 @@ $ ruby lib/reverse_string_test.rb
 5. [Shortest Subarray Unsorted](./lib/shortest_subarray_unsorted.rb)
 6. [Dutch National Flag](./lib/dutch_national_flag.rb)
 7. [Move Zeroes to End](./lib/move_zeroes_to_end.rb)
-8. Kadane's Algorithm
+8. [Kadane's Algorithm](./lib/kadanes_algorithm.rb)
 9. Sliding Window
 10. Zero Sum Subarray
 11. Subarray Sum
