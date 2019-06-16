@@ -25,6 +25,8 @@ class NewAlg
     File.open(main_file_path, 'w') do |file|
       file.puts '# Problem:'
       file.puts '#'
+      file.puts '# Given:'
+      file.puts '# Result:'
       file.puts
       file.puts "class #{camelize(class_name)}"
       file.puts '  def self.run'
