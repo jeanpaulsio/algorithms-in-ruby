@@ -26,8 +26,7 @@ $ ruby lib/arrays_and_strings/reverse_string_test.rb
 7. [Move Zeroes to End](./lib/arrays_and_strings/move_zeroes_to_end.rb)
 8. [Kadane's Algorithm](./lib/arrays_and_strings/kadanes_algorithm.rb)
 9. [Sliding Window](./lib/arrays_and_strings/sliding_window.rb)
-10. Zero Sum Subarray
-11. Subarray Sum
+10. [Zero Sum Subarray](./lib/arrays_and_strings/zero_sum_subarray.rb)
 
 ### Binary Search
 
