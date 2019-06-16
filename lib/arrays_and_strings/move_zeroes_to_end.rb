@@ -17,7 +17,7 @@ class MoveZeroesToEnd
     end
 
     pointer.upto(arr.length - 1) { |i| arr[i] = 0 }
-    
+
     arr
   end
 end

@@ -15,7 +15,7 @@ class KadanesAlgorithm
       max_ending_here = [0, max_ending_here + item].max
       max_sum = [max_ending_here, max_sum].max
     end
-    
+
     max_sum
   end
 end

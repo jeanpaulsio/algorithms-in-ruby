@@ -7,13 +7,9 @@
 class CloneEvenNumbers
   def self.find_last_positive_number(arr)
     result = arr.find_index { |i| i == -1 }
-    if result.nil?
-      arr.length - 1
-    else
-      result - 1
-    end
+    result.nil? ? arr.length - 1 : result - 1
   end
-  
+
   def self.run(arr)
     i = find_last_positive_number(arr)
     j = arr.length

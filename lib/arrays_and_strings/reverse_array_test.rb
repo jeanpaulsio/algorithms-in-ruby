@@ -7,16 +7,16 @@ class ReverseArrayTest < Minitest::Test
     actual = ReverseArray.run [5, 4, 3, 2, 1, 0]
     assert_equal expected, actual
   end
-  
+
   def test_array_with_odd_length
-    expected = ['foo', 'bar', 'baz']
-    actual = ReverseArray.run ['baz', 'bar', 'foo']
+    expected = %w[foo bar baz]
+    actual = ReverseArray.run %w[baz bar foo]
     assert_equal expected, actual
   end
 
   def test_array_with_one_item
-    expected = ['asdf']
-    actual = ReverseArray.run ['asdf']
+    expected = %w[asdf]
+    actual = ReverseArray.run %w[asdf]
     assert_equal expected, actual
   end
 end

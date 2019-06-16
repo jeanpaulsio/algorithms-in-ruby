@@ -11,9 +11,9 @@
 
 class DutchNationalFlag
   def self.run(arr, index)
-    lo  = -1
+    lo = -1
     mid = -1
-    hi  = arr.length
+    hi = arr.length
 
     target = arr[index]
 

@@ -14,10 +14,10 @@ class ReverseString
     while i >= 0
       if str[i] == ' '
         result += ' ' unless result.empty?
-        result += str[i+1...word_end]
+        result += str[i + 1...word_end]
         word_end = i
       end
-      
+
       i -= 1
     end
 

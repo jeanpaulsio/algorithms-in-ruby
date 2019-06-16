@@ -21,7 +21,7 @@ class ZeroSumSubarrayTest < Minitest::Test
   def test_single_negative_element
     assert_nil ZeroSumSubarray.run([-1])
   end
-  
+
   def test_base_case_has_sum
     arr = [2, 4, -2, 1, -3, 5, -3]
     expected = [1, 4]

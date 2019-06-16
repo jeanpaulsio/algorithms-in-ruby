@@ -7,13 +7,15 @@
 
 class ShortestSubarrayUnsorted
   def self.run(arr)
-    i = 0                  # dip   - traverse from left
-    j = arr.length - 1     # bump  - traverse from right
+    i = 0 # dip   - traverse from left
+    j = arr.length - 1 # bump  - traverse from right
 
     # find dip
     arr.each do |item|
-      # return early if array is sorted
-      return nil if i == arr.length - 1
+      if i == arr.length - 1
+        return # return early if array is sorted
+        nil
+      end
 
       break if arr[i + 1] <= item
       i += 1
@@ -32,7 +34,7 @@ class ShortestSubarrayUnsorted
 
     # expands the dip left
     i -= 1 while (i > 0 && arr[i - 1] > min)
-      
+
     # expand the bump right
     j += 1 while (j < arr.length - 1 && arr[j + 1] < max)
 

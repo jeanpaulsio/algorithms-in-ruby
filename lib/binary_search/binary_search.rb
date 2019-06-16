@@ -5,7 +5,7 @@ class BinarySearch
 
     while (low <= high)
       mid = low + (high - low) / 2
-      
+
       if arr[mid] == target
         return mid
       elsif arr[mid] > target

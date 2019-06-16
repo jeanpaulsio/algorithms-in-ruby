@@ -7,7 +7,7 @@ class ReverseStringTest < Minitest::Test
     actual = ReverseString.run 'foo bar baz quux'
     assert_equal expected, actual
   end
-  
+
   def test_two_words
     expected = 'bar foo'
     actual = ReverseString.run 'foo bar'
