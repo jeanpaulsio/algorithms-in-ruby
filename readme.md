@@ -39,7 +39,7 @@ bundle exec rbprettier --write '**/*.rb'
 1. [Binary Search](./lib/binary_search/binary_search.rb)
 2. [First Duplicate](./lib/binary_search/first_duplicate.rb)
 3. [Closest Element](./lib/binary_search/closest_element.rb)
-4. Search Insert Position
+4. [Search Insert Position](./lib/binary_search/search_insert_position.rb)
 5. Cyclically Sorted Min
 6. Find With Unknown Length
 7. Square Root of an Integer
