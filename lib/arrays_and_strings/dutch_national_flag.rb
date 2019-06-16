@@ -1,5 +1,5 @@
 # Problem:
-# Given an array of integers an index i, rearrange the array in the following order:
+# Given an array of integers and an index i, rearrange the array in the following order:
 # [
 #   elements <= arr[i],
 #   elements == arr[i],
