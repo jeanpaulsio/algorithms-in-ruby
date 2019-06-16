@@ -30,7 +30,7 @@ $ ruby lib/arrays_and_strings/reverse_string_test.rb
 
 ### Binary Search
 
-1. Binary Search
+1. [Binary Search](./lib/binary_search/binary_search.rb)
 2. First Duplicate
 3. Closest Element
 4. Search Insert Position
