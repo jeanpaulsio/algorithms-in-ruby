@@ -13,6 +13,12 @@ $ bundle install
 $ ruby lib/arrays_and_strings/reverse_string_test.rb
 ```
 
+## Prettier-ing files
+
+```bash
+bundle exec rbprettier --write '**/*.rb'
+```
+
 ## Table of Contents
 
 ### Arrays and Strings
