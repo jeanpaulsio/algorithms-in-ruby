@@ -43,4 +43,4 @@ bundle exec rbprettier --write '**/*.rb'
 5. [Cyclically Sorted Min](./lib/binary_search/cyclically_sorted_min.rb)
 6. [Find With Unknown Length](./lib/binary_search/unknown_length.rb)
 7. [Square Root of an Integer](./lib/binary_search/square_root.rb)
-8. Find Array Peak
+8. [Find Array Peak](./lib/binary_search/array_peak.rb)
