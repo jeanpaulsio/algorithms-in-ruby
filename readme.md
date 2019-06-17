@@ -44,3 +44,7 @@ bundle exec rbprettier --write '**/*.rb'
 6. [Find With Unknown Length](./lib/binary_search/unknown_length.rb)
 7. [Square Root of an Integer](./lib/binary_search/square_root.rb)
 8. [Find Array Peak](./lib/binary_search/array_peak.rb)
+
+### Recursion and Backtracking
+
+1. [Fibonacci](./lib/recursion_and_backtracking/fibonacci.rb)
