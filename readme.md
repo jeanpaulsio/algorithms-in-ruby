@@ -48,3 +48,4 @@ bundle exec rbprettier --write '**/*.rb'
 ### Recursion and Backtracking
 
 1. [Fibonacci](./lib/recursion_and_backtracking/fibonacci.rb)
+2. [Power](./lib/recursion_and_backtracking/power.rb)
