@@ -14,6 +14,15 @@ $ asdf install
 $ ruby lib/arrays_and_strings/reverse_string_test.rb
 ```
 
+## Watching Tests
+
+If you prefer not to run tests manually, you can run:
+
+```
+$ bundle exec guard
+```
+
+
 ## Prettier-ing files
 
 ```bash
