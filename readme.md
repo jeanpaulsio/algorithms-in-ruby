@@ -50,3 +50,4 @@ bundle exec rbprettier --write '**/*.rb'
 
 1. [Fibonacci](./lib/recursion_and_backtracking/fibonacci.rb)
 2. [Power](./lib/recursion_and_backtracking/power.rb)
+3. [Print Combos](./lib/recursion_and_backtracking/print_combos.rb)
