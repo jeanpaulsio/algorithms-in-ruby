@@ -5,6 +5,7 @@ A collection of classic computer science algorithms written in Ruby
 ```bash
 $ git clone https://github.com/jeanpaulsio/algorithms_in_ruby.git
 $ bundle install
+$ asdf install
 ```
 
 ## Running Tests
