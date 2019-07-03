@@ -5,7 +5,7 @@
 # Result: [1, 2], [1, 3], [2, 3]
 
 class PrintCombos
-  def self.run(arr, buffer, start_index, buffer_index)
+  def self.run(arr, buffer, next_index, buffer_index)
     return "" if arr.empty? || buffer.length > arr.length
 
     if buffer_index == buffer.length
@@ -13,11 +13,11 @@ class PrintCombos
       return
     end
 
-    if start_index == arr.length
+    if next_index == arr.length
       return
     end
 
-    start_index.upto(arr.length - 1) do |i|
+    next_index.upto(arr.length - 1) do |i|
       buffer[buffer_index] = arr[i]
       run(arr, buffer, i + 1, buffer_index + 1)
     end

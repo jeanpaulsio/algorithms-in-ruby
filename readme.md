@@ -62,4 +62,4 @@ bundle exec rbprettier --write '**/*.rb'
 3. [Print Combos](./lib/recursion_and_backtracking/print_combos.rb)
 4. [Phone Number Mnemonics](./lib/recursion_and_backtracking/phone_number_mnemonics.rb)
 5. [Array Subsets](./lib/recursion_and_backtracking/array_subsets.rb)
-
+6. [Array Permutations](./lib/recursion_and_backtracking/array_permutations.rb)
