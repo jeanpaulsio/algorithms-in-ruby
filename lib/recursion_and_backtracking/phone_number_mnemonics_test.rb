@@ -1,10 +1,7 @@
 require_relative '../../test_helper'
-require_relative '../../utils'
 require_relative 'phone_number_mnemonics'
 
 class PhoneNumberMnemonicsTest < Minitest::Test
-  include Utils
-
   def test_array_is_empty
     assert_output("") do
       PhoneNumberMnemonics.run([], Array.new(2), 0, 0)

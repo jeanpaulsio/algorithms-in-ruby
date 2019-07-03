@@ -1,10 +1,7 @@
 require_relative '../../test_helper'
-require_relative '../../utils'
 require_relative 'print_combos'
 
 class PrintCombosTest < Minitest::Test
-  include Utils
-
   def test_arr_is_empty
     assert_output("") do
       PrintCombos.run([], Array.new(0), 0, 0)
