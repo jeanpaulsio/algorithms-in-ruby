@@ -1,5 +1,11 @@
+require_relative './test_helper'
+
+
 module Utils
-  def pp(arr)
-    arr.map(&:to_s).join("\n").concat("\n")
+  def print_results(*args)
+    result = args.map(&:to_s).join("\n").concat("\n")
+
+    assert !result.nil?
+    result
   end
 end
