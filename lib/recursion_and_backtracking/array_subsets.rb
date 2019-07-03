@@ -29,3 +29,4 @@ class ArraySubsets
       p buffer[0, buffer_index]
     end
 end
+
