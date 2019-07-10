@@ -1,3 +1,5 @@
+require_relative 'node'
+
 class LinkedList
   attr_accessor :head, :tail
 
@@ -21,5 +23,11 @@ class LinkedList
       @tail.next = node
     end
     @tail = node
+  end
+
+  def self.generate(*values)
+    list = self.new
+    values.each { |v| list.append Node.new(v) }
+    list
   end
 end

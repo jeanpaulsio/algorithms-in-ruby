@@ -42,6 +42,8 @@
 ### Linked Lists
 
 1. [Sort Linked List of 0s, 1s, 2s](./lib/linked_lists/sort_zero_one_two.rb)
+2. [Split list's odd and even nodes](./lib/linked_lists/odd_even.rb)
+
 
 ---
 
