@@ -1,35 +1,4 @@
-A collection of classic computer science algorithms written in Ruby
-
-## Getting Started
-
-```bash
-$ git clone https://github.com/jeanpaulsio/algorithms_in_ruby.git
-$ bundle install
-$ asdf install
-```
-
-## Running Tests
-
-```bash
-$ ruby lib/arrays_and_strings/reverse_string_test.rb
-```
-
-## Watching Tests
-
-If you prefer not to run tests manually, you can run:
-
-```
-$ bundle exec guard
-```
-
-
-## Prettier-ing files
-
-```bash
-bundle exec rbprettier --write '**/*.rb'
-```
-
-## Table of Contents
+# Table of Contents
 
 ### Arrays and Strings
 
@@ -73,4 +42,35 @@ bundle exec rbprettier --write '**/*.rb'
 ### Linked Lists
 
 1. [Sort Linked List of 0s, 1s, 2s](./lib/linked_lists/sort_zero_one_two.rb)
+
+---
+
+## Getting Started
+
+```bash
+$ git clone https://github.com/jeanpaulsio/algorithms_in_ruby.git
+$ bundle install
+$ asdf install
+```
+
+## Running Tests
+
+```bash
+$ ruby lib/arrays_and_strings/reverse_string_test.rb
+```
+
+## Watching Tests
+
+If you prefer not to run tests manually, you can run:
+
+```
+$ bundle exec guard
+```
+
+
+## Prettier-ing files
+
+```bash
+bundle exec rbprettier --write '**/*.rb'
+```
 
