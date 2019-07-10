@@ -64,3 +64,4 @@ bundle exec rbprettier --write '**/*.rb'
 5. [Array Subsets](./lib/recursion_and_backtracking/array_subsets.rb)
 6. [Array Permutations](./lib/recursion_and_backtracking/array_permutations.rb)
 7. [Coin Change](./lib/recursion_and_backtracking/coin_change.rb)
+7. [Maze Path Easy](./lib/recursion_and_backtracking/maze_path_easy.rb)
