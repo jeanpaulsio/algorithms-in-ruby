@@ -1,41 +1,43 @@
 require_relative '../../test_helper'
 require_relative 'search_insert_position'
 
-class SearchInsertPositionTest < Minitest::Test
-  # Edge cases
-  def test_empty_array_inserts_at_0th_index
-    actual = SearchInsertPosition.run([], target: 0)
-    assert_equal 0, actual
+describe SearchInsertPosition do
+  describe 'edge cases' do
+    it 'should insert item into an empty array' do
+      actual = SearchInsertPosition.run([], target: 0)
+      expect(actual).must_equal 0
+    end
   end
 
-  # Normal cases
-  def test_target_exists_in_array
-    actual = SearchInsertPosition.run([1, 3, 5, 6], target: 3)
-    assert_equal 1, actual
-  end
+  describe 'normal cases' do
+    it 'should insert before existing target item' do
+      actual = SearchInsertPosition.run([1, 3, 5, 6], target: 3)
+      expect(actual).must_equal 1
+    end
 
-  def test_should_insert_at_0th_index
-    actual = SearchInsertPosition.run([1, 3, 5, 6], target: 0)
-    assert_equal 0, actual
-  end
+    it 'should insert at 0th index when target < arr[0]' do
+      actual = SearchInsertPosition.run([1, 3, 5, 6], target: 0)
+      expect(actual).must_equal 0
+    end
 
-  def test_should_insert_at_1st_index
-    actual = SearchInsertPosition.run([1, 3, 5, 6], target: 2)
-    assert_equal 1, actual
-  end
+    it 'should insert at 1st index' do
+      actual = SearchInsertPosition.run([1, 3, 5, 6], target: 2)
+      expect(actual).must_equal 1
+    end
 
-  def test_should_insert_at_2nd_index
-    actual = SearchInsertPosition.run([1, 3, 5, 6], target: 4)
-    assert_equal 2, actual
-  end
+    it 'should insert at 2nd index' do
+      actual = SearchInsertPosition.run([1, 3, 5, 6], target: 4)
+      expect(actual).must_equal 2
+    end
 
-  def test_should_insert_at_3nd_index
-    actual = SearchInsertPosition.run([1, 3, 5, 7], target: 6)
-    assert_equal 3, actual
-  end
+    it 'should insert at 3rd index' do
+      actual = SearchInsertPosition.run([1, 3, 5, 7], target: 6)
+      expect(actual).must_equal 3
+    end
 
-  def test_should_insert_after_last_index
-    actual = SearchInsertPosition.run([1, 3, 5, 7], target: 100)
-    assert_equal 4, actual
+    it 'should insert at last index' do
+      actual = SearchInsertPosition.run([1, 3, 5, 7], target: 100)
+      expect(actual).must_equal 4
+    end
   end
 end

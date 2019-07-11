@@ -1,40 +1,43 @@
 require_relative '../../test_helper'
 require_relative 'array_peak'
 
-class ArrayPeakTest < Minitest::Test
-  # Corner cases
-  def test_empty_array
-    assert_nil ArrayPeak.run([])
-  end
-  
-  def test_single_element
-    actual = ArrayPeak.run([1])
-    assert_equal 1, actual
-  end
-  
-  def test_two_elements_in_array_ascending
-    actual = ArrayPeak.run([0, 1])
-    assert_equal 1, actual
+describe ArrayPeak do
+  describe 'corner cases' do
+    it 'should return nil for empty array as input' do
+      actual = ArrayPeak.run([])
+      expect(actual).must_be_nil
+    end
+
+    it 'should work for array with single item' do
+      actual = ArrayPeak.run([1])
+      expect(actual).must_equal 1
+    end
+
+    it 'should work for array with 2 asc elements' do
+      actual = ArrayPeak.run([0, 1])
+      expect(actual).must_equal 1
+    end
+
+    it 'should work for array with 2 desc elements' do
+      actual = ArrayPeak.run([1, 0])
+      expect(actual).must_equal 1
+    end
+
+    it 'should work when first element is peak' do
+      actual = ArrayPeak.run([5, 3, 1])
+      expect(actual).must_equal 5
+    end
+
+    it 'should work when last element is peak' do
+      actual = ArrayPeak.run([1, 2, 3])
+      expect(actual).must_equal 3
+    end
   end
 
-  def test_two_elements_in_array_descending
-    actual = ArrayPeak.run([1, 0])
-    assert_equal 1, actual
-  end
-  
-  def test_first_element_is_peak
-    actual = ArrayPeak.run([5, 3, 1])
-    assert_equal 5, actual
-  end
-
-  def test_last_element_is_peak
-    actual = ArrayPeak.run([1, 2, 3])
-    assert_equal 3, actual
-  end
-
-  # Normal cases
-  def test_normal_case
-    actual = ArrayPeak.run([5, 10, 20, 15, 16, 17, 18, 15])
-    assert_equal 20, actual
+  describe 'regular cases' do
+    it 'should find the peak in the middle' do
+      actual = ArrayPeak.run([5, 10, 20, 15, 16, 17, 18, 15])
+      expect(actual).must_equal 20
+    end
   end
 end

@@ -1,39 +1,45 @@
 require_relative '../../test_helper'
 require_relative 'cyclically_sorted_min'
 
-class CyclicallySortedMinTest < Minitest::Test
-  def test_empty_array
-    actual = CyclicallySortedMin.run([])
-    assert_equal -1, actual
+describe CyclicallySortedMin do
+  describe 'edge cases' do
+    it 'should return -1 given an empty array' do
+      actual = CyclicallySortedMin.run([])
+      expect(actual).must_equal(-1)
+    end
   end
 
-  def test_one_element
-    actual = CyclicallySortedMin.run([1])
-    assert_equal 0, actual
+  describe 'base cases' do
+    it 'should return 0 given a single item array' do
+      actual = CyclicallySortedMin.run([1])
+      expect(actual).must_equal 0
+    end
+
+    it 'should return 0 given a non-rotated double item array' do
+      actual = CyclicallySortedMin.run([1, 2])
+      expect(actual).must_equal 0
+    end
+
+    it 'should return 1 given a rotated double item array' do
+      actual = CyclicallySortedMin.run([2, 1])
+      expect(actual).must_equal 1
+    end
   end
 
-  def test_two_elements_not_rotated
-    actual = CyclicallySortedMin.run([1, 2])
-    assert_equal 0, actual
-  end
+  describe 'regular cases' do
+    it 'should return 0 given a sorted array' do
+      actual = CyclicallySortedMin.run([0, 1, 2, 3, 4, 5, 6])
+      expect(actual).must_equal 0
+    end
 
-  def test_two_elements_not_rotated
-    actual = CyclicallySortedMin.run([4, 3])
-    assert_equal 1, actual
-  end
+    it 'should find the index of a rotated array' do
+      actual = CyclicallySortedMin.run([3, 4, 5, 6, 0, 1, 2])
+      expect(actual).must_equal 4
+    end
 
-  def test_non_cyclically_sorted_array
-    actual = CyclicallySortedMin.run([0, 1, 2, 3, 4, 5, 6])
-    assert_equal 0, actual
-  end
-
-  def test_cyclically_sorted_array
-    actual = CyclicallySortedMin.run([3, 4, 5, 6, 0, 1, 2])
-    assert_equal 4, actual
-  end
-
-  def test_cyclically_sorted_array_min_value_at_end
-    actual = CyclicallySortedMin.run([3, 4, 5, 6, 7, 8, 2])
-    assert_equal 6, actual
+    it 'should find the array min at the end of an array' do
+      actual = CyclicallySortedMin.run([3, 4, 5, 6, 7, 8, 2])
+      expect(actual).must_equal 6
+    end
   end
 end
