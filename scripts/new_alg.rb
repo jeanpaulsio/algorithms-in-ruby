@@ -40,12 +40,20 @@ class NewAlg
       file.puts "require_relative '../../test_helper'"
       file.puts "require_relative '#{class_name}'"
       file.puts
-      file.puts "class #{camelize(class_name)}Test < Minitest::Test"
-      file.puts '  def test_'
-      file.puts '    expected = true'
-      file.puts "    actual = #{camelize(class_name)}.run"
-      file.puts '    assert_equal expected, actual'
-      file.puts '  end'
+      file.puts "describe #{camelize class_name} do"
+      file.puts "  describe 'edge cases' do"
+      file.puts "  end"
+      file.puts
+      file.puts "  describe 'base cases' do"
+      file.puts "  end"
+      file.puts
+      file.puts "  describe 'regular cases' do"
+      file.puts "    it 'should do stuff' do"
+      file.puts "      expected = true"
+      file.puts "      actual = #{camelize class_name}.run"
+      file.puts "      expect(actual).must_equal expected"
+      file.puts "    end"
+      file.puts "  end"
       file.puts 'end'
     end
 
