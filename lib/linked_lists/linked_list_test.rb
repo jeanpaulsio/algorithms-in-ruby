@@ -2,42 +2,43 @@ require_relative '../../test_helper'
 require_relative 'linked_list'
 require_relative 'node'
 
-class LinkedListTest < Minitest::Test
-  def setup
-    @ll = LinkedList.generate(1, 2, 3, 4)
-  end
+describe LinkedList do
+  describe '#get' do
+    subject { LinkedList.generate(1, 2, 3, 4) }
 
-  # LinkedList#get
-  def test_should_get_a_node_at_position_n
-    assert_equal 1, @ll.get(1).value
-    assert_equal 2, @ll.get(2).value
-    assert_equal 3, @ll.get(3).value
-    assert_equal 4, @ll.get(4).value
-  end
+    it 'should return the node' do
+      expect(subject.get(1).value).must_equal 1
+      expect(subject.get(2).value).must_equal 2
+      expect(subject.get(3).value).must_equal 3
+      expect(subject.get(4).value).must_equal 4
+    end
 
-  def test_should_handle_getting_node_in_empty_list
-    assert_output "No node at index 1\n" do
-      LinkedList.new.get(1)
+    describe 'when querying an empty list' do
+      it 'should print an error message' do
+        -> { LinkedList.new.get(1) }.must_output(/No node at index 1/)
+      end
     end
   end
 
-  # LinkedList#append
-  def test_append_node_to_empty_list
-    @ll = LinkedList.new
-    assert_nil @ll.head
-    assert_nil @ll.tail
+  describe '#append' do
+    subject { LinkedList.new }
 
-    @ll.append Node.new(5)
-    assert_equal 5, @ll.head.value
+    it 'should work for empty lists' do
+      expect(subject.head).must_be_nil
+      expect(subject.tail).must_be_nil
+
+      subject.append Node.new(1)
+
+      expect(subject.head.value).must_equal 1
+      expect(subject.head).wont_be_nil
+      expect(subject.tail).wont_be_nil
+    end
+
+    it 'should work for populated lists' do
+      subject = LinkedList.generate(1, 2, 3, 4)
+      subject.append Node.new(5)
+
+      expect(subject.tail.value).must_equal 5
+    end
   end
-
-  def test_append_node_to_list_with_items
-    new_node = Node.new(5)
-
-    @ll.append(new_node)
-    assert_equal 5, @ll.tail.value
-    assert_equal 1, @ll.head.value
-  end
-
-  # LinkedList#delete
 end

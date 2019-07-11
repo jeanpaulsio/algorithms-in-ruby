@@ -2,46 +2,42 @@ require_relative '../../test_helper'
 require_relative 'linked_list'
 require_relative 'sort_zero_one_two'
 
-class SortZeroOneTwoTest < Minitest::Test
-  def setup
-    @ll = LinkedList.generate(2, 0, 1, 0, 2, 1)
+describe SortZeroOneTwo do
+  subject do
+    SortZeroOneTwo.run(LinkedList.generate(2, 0, 1, 0, 2, 1))
   end
 
-  def test_empty_list
-    actual = SortZeroOneTwo.run(LinkedList.new)
-    assert_nil actual.head
-    assert_nil actual.tail
+  it 'should handle an empty list' do
+    expect(SortZeroOneTwo.run(LinkedList.new).head).must_be_nil
+    expect(SortZeroOneTwo.run(LinkedList.new).tail).must_be_nil
   end
 
-  def test_raises_error_when_node_has_illegal_number
-    assert_raises ArgumentError do
-      SortZeroOneTwo.run(LinkedList.generate(3))
+  it 'should raise an error given an illegal number' do
+    subject = proc { SortZeroOneTwo.run(LinkedList.generate(3)) }
+    expect(subject).must_raise ArgumentError
+  end
+
+  it 'should sort a list of 0s, 1s, and 2s' do
+    until subject.head.next.nil?
+      head_value = subject.head.value
+      next_value = subject.head.next.value
+
+      expect(head_value <= next_value).must_equal true
+
+      subject.head = subject.head.next
     end
   end
 
-  def test_sorts_list_of_zeros_ones_and_twos
-    assert_linked_list_sorted
-  end
+  it 'should work for lists missing a valid number' do
+    subject = SortZeroOneTwo.run(LinkedList.generate(2, 1, 2, 1))
 
-  def test_works_when_one_of_the_numbers_is_missing
-    @ll = LinkedList.generate(2, 0, 2, 0, 0, 2)
+    until subject.head.next.nil?
+      head_value = subject.head.value
+      next_value = subject.head.next.value
 
-    assert_linked_list_sorted
-  end
+      expect(head_value <= next_value).must_equal true
 
-  private
-
-    def assert_linked_list_sorted
-      actual = SortZeroOneTwo.run(@ll)
-
-      pointer = actual
-
-      until pointer.head.next.nil?
-        head_value = pointer.head.value
-        next_value = pointer.head.next.value
-
-        assert head_value <= next_value, "#{head_value} should be less than #{next_value}"
-        pointer.head = pointer.head.next
-      end
+      subject.head = subject.head.next
     end
+  end
 end
