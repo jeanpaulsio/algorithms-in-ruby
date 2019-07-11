@@ -14,7 +14,6 @@ class ShortestSubarrayUnsorted
     arr.each do |item|
       if i == arr.length - 1
         return # return early if array is sorted
-        nil
       end
 
       break if arr[i + 1] <= item

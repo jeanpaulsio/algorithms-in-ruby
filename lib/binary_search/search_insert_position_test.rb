@@ -9,7 +9,7 @@ describe SearchInsertPosition do
     end
   end
 
-  describe 'normal cases' do
+  describe 'regular cases' do
     it 'should insert before existing target item' do
       actual = SearchInsertPosition.run([1, 3, 5, 6], target: 3)
       expect(actual).must_equal 1

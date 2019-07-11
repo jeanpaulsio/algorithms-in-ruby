@@ -7,23 +7,25 @@ describe OddEven do
     OddEven.run(LinkedList.generate(2, 1, 4, 5, 2, 8))
   end
 
-  it 'should return two lists' do
-    odd, even = subject
+  describe 'regular cases' do
+    it 'should return two lists' do
+      odd, even = subject
 
-    odd_lambda = lambda do
-      until odd.head.nil?
-        puts odd.head.value
-        odd.head = odd.head.next
+      odd_lambda = lambda do
+        until odd.head.nil?
+          puts odd.head.value
+          odd.head = odd.head.next
+        end
       end
-    end
-    odd_lambda.must_output(/2\s4\s2/)
+      odd_lambda.must_output(/2\s4\s2/)
 
-    even_lambda = lambda do
-      until even.head.nil?
-        puts even.head.value
-        even.head = even.head.next
+      even_lambda = lambda do
+        until even.head.nil?
+          puts even.head.value
+          even.head = even.head.next
+        end
       end
+      even_lambda.must_output(/1\s5\s8/)
     end
-    even_lambda.must_output(/1\s5\s8/)
   end
 end
