@@ -1,47 +1,64 @@
 require_relative '../../test_helper'
 require_relative 'zero_sum_subarray'
 
-class ZeroSumSubarrayTest < Minitest::Test
-  def test_empty_array
-    assert_nil ZeroSumSubarray.run([])
+describe ZeroSumSubarray do
+  describe 'edge cases' do
+    it 'should return nil given an empty array' do
+      actual = ZeroSumSubarray.run([])
+      expect(actual).must_be_nil
+    end
+
+    it 'should return nil given nil input' do
+      actual = ZeroSumSubarray.run(nil)
+      expect(actual).must_be_nil
+    end
   end
 
-  def test_nil_input
-    assert_nil ZeroSumSubarray.run(nil)
+  describe 'base cases' do
+    it 'should return [0, 0] given single element of 0' do
+      expected = [0, 0]
+      actual = ZeroSumSubarray.run([0])
+      expect(actual).must_equal expected
+    end
+
+    it 'should return nil for single +ve element' do
+      actual = ZeroSumSubarray.run([1])
+      expect(actual).must_be_nil
+    end
+
+    it 'should return nil for single -ve element' do
+      actual = ZeroSumSubarray.run([-1])
+      expect(actual).must_be_nil
+    end
   end
 
-  def test_single_element_is_zero
-    assert_equal [0, 0], ZeroSumSubarray.run([0])
-  end
+  describe 'regular cases' do
+    it 'should work when 0 sum exists' do
+      arr = [2, 4, -2, 1, -3, 5, -3]
+      expected = [1, 4]
+      actual = ZeroSumSubarray.run(arr)
+      expect(actual).must_equal expected
+    end
 
-  def test_single_positive_element
-    assert_nil ZeroSumSubarray.run([1])
-  end
+    it 'should return nil when 0 sum does not exist' do
+      arr = [2, 4, -2, 1, -3, 5, -3]
+      expected = [1, 4]
+      actual = ZeroSumSubarray.run(arr)
+      expect(actual).must_equal expected
+    end
 
-  def test_single_negative_element
-    assert_nil ZeroSumSubarray.run([-1])
-  end
+    it 'should work when answer is at front of array' do
+      arr = [1, -1, 2, 3, 4, 5, 6, 6]
+      expected = [0, 1]
+      actual = ZeroSumSubarray.run(arr)
+      expect(actual).must_equal expected
+    end
 
-  def test_base_case_has_sum
-    arr = [2, 4, -2, 1, -3, 5, -3]
-    expected = [1, 4]
-    assert_equal expected, ZeroSumSubarray.run(arr)
-  end
-
-  def test_base_case_has_no_sum
-    arr = [2, 4, -3]
-    assert_nil ZeroSumSubarray.run(arr)
-  end
-
-  def test_base_case_has_sum_at_beginning_of_array
-    arr = [1, -1, 2, 3, 4, 5, 6, 6]
-    expected = [0, 1]
-    assert_equal expected, ZeroSumSubarray.run(arr)
-  end
-
-  def test_base_case_has_sum_at_end_of_array
-    arr = [1, 2, 3, 4, 5, 6, -6]
-    expected = [5, 6]
-    assert_equal expected, ZeroSumSubarray.run(arr)
+    it 'should work when answer is at end of array' do
+      arr = [1, 2, 3, 4, 5, 6, -6]
+      expected = [5, 6]
+      actual = ZeroSumSubarray.run(arr)
+      expect(actual).must_equal expected
+    end
   end
 end

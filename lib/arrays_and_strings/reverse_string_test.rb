@@ -1,22 +1,22 @@
 require_relative '../../test_helper'
 require_relative 'reverse_string'
 
-class ReverseStringTest < Minitest::Test
-  def test_base_case
+describe ReverseString do
+  it 'should work for multiple words' do
     expected = 'quux baz bar foo'
     actual = ReverseString.run 'foo bar baz quux'
-    assert_equal expected, actual
+    expect(actual).must_equal expected
   end
 
-  def test_two_words
+  it 'should work for two words' do
     expected = 'bar foo'
     actual = ReverseString.run 'foo bar'
-    assert_equal expected, actual
+    expect(actual).must_equal expected
   end
 
-  def test_one_word_with_space
+  it 'should work for a single word with a space' do
     expected = 'foo'
     actual = ReverseString.run 'foo '
-    assert_equal expected, actual
+    expect(actual).must_equal expected
   end
 end
