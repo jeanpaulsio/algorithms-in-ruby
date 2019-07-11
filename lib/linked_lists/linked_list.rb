@@ -25,6 +25,9 @@ class LinkedList
     @tail = node
   end
 
+  def delete(node, prev_node)
+  end
+
   def self.generate(*values)
     list = self.new
     values.each { |v| list.append Node.new(v) }

@@ -7,6 +7,7 @@ class LinkedListTest < Minitest::Test
     @ll = LinkedList.generate(1, 2, 3, 4)
   end
 
+  # LinkedList#get
   def test_should_get_a_node_at_position_n
     assert_equal 1, @ll.get(1).value
     assert_equal 2, @ll.get(2).value
@@ -20,6 +21,7 @@ class LinkedListTest < Minitest::Test
     end
   end
 
+  # LinkedList#append
   def test_append_node_to_empty_list
     @ll = LinkedList.new
     assert_nil @ll.head
@@ -36,4 +38,6 @@ class LinkedListTest < Minitest::Test
     assert_equal 5, @ll.tail.value
     assert_equal 1, @ll.head.value
   end
+
+  # LinkedList#delete
 end
