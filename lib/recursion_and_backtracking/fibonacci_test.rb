@@ -1,18 +1,20 @@
 require_relative '../../test_helper'
 require_relative 'fibonacci'
 
-class FibonacciTest < Minitest::Test
-  def test_base_cases
-    assert_equal 1, Fibonacci.run(1)
-    assert_equal 1, Fibonacci.run(2)
-    assert_equal 2, Fibonacci.run(3)
-    assert_equal 3, Fibonacci.run(4)
-    assert_equal 5, Fibonacci.run(5)
-    assert_equal 8, Fibonacci.run(6)
-    assert_equal 13, Fibonacci.run(7)
-    assert_equal 21, Fibonacci.run(8)
-    assert_equal 6_765, Fibonacci.run(20)
-    assert_equal 832_040, Fibonacci.run(30)
-    assert_equal 102_334_155, Fibonacci.run(40)
+describe Fibonacci do
+ describe 'regular cases' do
+  it 'should work' do
+    expect(Fibonacci.run(1)).must_equal 1
+    expect(Fibonacci.run(2)).must_equal 1
+    expect(Fibonacci.run(3)).must_equal 2
+    expect(Fibonacci.run(4)).must_equal 3
+    expect(Fibonacci.run(5)).must_equal 5
+    expect(Fibonacci.run(6)).must_equal 8
+    expect(Fibonacci.run(7)).must_equal 13
+    expect(Fibonacci.run(8)).must_equal 21
+    expect(Fibonacci.run(20)).must_equal 6_765
+    expect(Fibonacci.run(30)).must_equal 832_040
+    expect(Fibonacci.run(40)).must_equal 102_334_155
   end
+ end
 end

@@ -1,54 +1,57 @@
 require_relative '../../test_helper'
 require_relative 'coin_change'
 
-class CoinChangeTest < Minitest::Test
-  def test_coin_array_is_empty
-    assert_output("") do
-      CoinChange.run([], 1, [], 0, 0)
+describe CoinChange do
+  describe 'edge cases' do
+    it 'should print an empty string given an empty array' do
+      expected = ''
+      subject = -> { CoinChange.run([], 1, [], 0, 0) }
+      expect(subject).must_output expected
     end
   end
 
-  def test_coin_array_with_one_item
-    expected = print_results [1]
-    assert_output(expected) do
-      CoinChange.run([1], 1, [], 0, 0)
+  describe 'base cases' do
+    it 'should print single item given an array of length 1' do
+      expected = print_results [1]
+      subject = -> { CoinChange.run([1], 1, [], 0, 0) }
+      expect(subject).must_output expected
+    end
+
+    it 'should print an empty string when target is negative' do
+      expected = ''
+      subject = -> { CoinChange.run([], -1, [], 0, 0) }
+      expect(subject).must_output expected
     end
   end
 
-  def test_target_is_negative
-    assert_output("") do
-      CoinChange.run([1], -1, [], 0, 0)
+  describe 'regular cases' do
+    it 'should print combinations when target == largest coin' do
+      arr = [1, 2, 5]
+      target = 5
+
+      expected = print_results(
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 2],
+        [1, 2, 2],
+        [5]
+      )
+      subject = -> { CoinChange.run(arr, target, [], 0, 0) }
+      expect(subject).must_output expected
     end
-  end
 
-  def test_target_is_equal_to_larget_coin
-    arr = [1, 2, 5]
-    target = 5
+    it 'should print combinations when target >= largest coin' do
+      arr = [1, 2, 5]
+      target = 6
 
-    expected = print_results(
-      [1, 1, 1, 1, 1],
-      [1, 1, 1, 2],
-      [1, 2, 2],
-      [5]
-    )
-    assert_output(expected) do
-      CoinChange.run(arr, target, [], 0, 0)
-    end
-  end
-
-  def test_target_is_gt_or_equal_to_larget_coin
-    arr = [1, 2, 5]
-    target = 6
-
-    expected = print_results(
-      [1, 1, 1, 1, 1, 1],
-      [1, 1, 1, 1, 2],
-      [1, 1, 2, 2],
-      [1, 5],
-      [2, 2, 2]
-    )
-    assert_output(expected) do
-      CoinChange.run(arr, target, [], 0, 0)
+      expected = print_results(
+        [1, 1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 2],
+        [1, 1, 2, 2],
+        [1, 5],
+        [2, 2, 2]
+      )
+      subject = -> { CoinChange.run(arr, target, [], 0, 0) }
+      expect(subject).must_output expected
     end
   end
 end
