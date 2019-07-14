@@ -45,6 +45,13 @@ describe LinkedList do
   describe '#delete' do
     subject { LinkedList.generate(1, 2, 3, 4, 5) }
 
+    it 'should return nil if input node is nil' do
+      subject.delete(nil, nil)
+
+      expect(subject.head.value).must_equal 1
+      expect(subject.tail.value).must_equal 5
+    end
+
     it 'should remove a head node' do
       node = subject.head
       prev_node = nil

@@ -26,7 +26,9 @@ class LinkedList
   end
 
   def delete(node, prev_node)
-    if node == head && prev_node.nil?
+    if node.nil?
+      return
+    elsif node == head && prev_node.nil?
       self.head = node.next
     elsif node == tail
       self.tail = prev_node
