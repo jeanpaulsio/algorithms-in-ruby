@@ -26,6 +26,14 @@ class LinkedList
   end
 
   def delete(node, prev_node)
+    if node == head && prev_node.nil?
+      self.head = node.next
+    elsif node == tail
+      self.tail = prev_node
+      prev_node.next = nil
+    elsif !prev_node.nil?
+      prev_node.next = node.next
+    end
   end
 
   def self.generate(*values)

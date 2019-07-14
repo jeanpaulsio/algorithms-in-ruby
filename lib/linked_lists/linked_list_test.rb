@@ -41,4 +41,43 @@ describe LinkedList do
       expect(subject.tail.value).must_equal 5
     end
   end
+
+  describe '#delete' do
+    subject { LinkedList.generate(1, 2, 3, 4, 5) }
+
+    it 'should remove a head node' do
+      node = subject.head
+      prev_node = nil
+
+      subject.delete(node, prev_node)
+
+      expect(subject.head).wont_equal node
+      expect(subject.head).must_equal node.next
+    end
+
+    it 'should remove a tail node' do
+      node = subject.tail
+      prev_node = subject.get(4)
+
+      # Make sure that prev_node is indeed 1 before the tail
+      expect(prev_node.next).must_equal node
+
+      subject.delete(node, prev_node)
+
+      expect(subject.tail).must_equal prev_node
+      expect(subject.tail.value).must_equal 4
+      expect(subject.tail.next).must_be_nil
+      expect(subject.get(3).next).must_equal subject.tail
+    end
+
+    it 'should remove a node in the middle' do
+      node = subject.get(3)
+      prev_node = subject.get(2)
+
+      subject.delete(node, prev_node)
+
+      expect(prev_node.next.value).must_equal 4
+      expect(subject.tail.value).must_equal 5
+    end
+  end
 end
