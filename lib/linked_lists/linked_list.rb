@@ -38,6 +38,89 @@ class LinkedList
     end
   end
 
+  def create_cycle_at(target_node)
+    self.tail.next = target_node
+  end
+
+  def has_cycle?
+    fast = self.head
+    slow = self.head
+
+    until fast.nil?
+      fast = fast.next
+      return true if fast == slow
+
+      unless fast.nil?
+        fast = fast.next
+        return true if fast == slow
+      end
+
+      slow = slow.next
+    end
+
+    false
+  end
+
+  def cycle_length
+    fast = self.head
+    slow = self.head
+
+    until fast.nil?
+      fast= fast.next
+      break if fast == slow
+
+      unless fast.nil?
+        fast = fast.next
+        break if fast == slow
+      end
+
+      slow = slow.next
+    end
+
+    return -1 if fast.nil?
+
+    fast = fast.next
+    nodes_passed = 1
+    until fast == slow
+      fast = fast.next
+      nodes_passed += 1
+    end
+    nodes_passed
+  end
+
+  def median
+    fast = self.head
+    slow = self.head
+
+    until fast.nil?
+      fast = fast.next
+      fast = fast.next unless fast.nil?
+      break if fast.nil?
+      slow = slow.next unless slow.next.nil?
+    end
+
+    slow
+  end
+
+  def cycle_head
+    # Initialize two pointers
+    fast = self.head
+    slow = self.head
+
+    # Move the fast pointer the cycle length
+    # By the time the fast pointer reaches the "tail",
+    # the slow pointer should be at the same spot as the fast
+    # pointer - which is at the head of the cycle
+    cycle_length.times { fast = fast.next }
+
+    until fast == slow
+      fast = fast.next
+      slow = slow.next
+    end
+
+    slow
+  end
+
   def self.generate(*values)
     list = self.new
     values.each { |v| list.append Node.new(v) }
