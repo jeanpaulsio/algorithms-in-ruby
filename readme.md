@@ -46,6 +46,8 @@
 3. [Split list's odd and even nodes](./lib/linked_lists/odd_even.rb)
 4. [LRU Cache](./lib/linked_lists/lru_cache.rb)
 5. Smallest Subarray Covering All Values
+6. Reverse a Linked List
+7. Check if LL is a palindrome
 
 
 ---
