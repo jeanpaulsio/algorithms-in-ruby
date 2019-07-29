@@ -49,6 +49,10 @@
 6. Reverse a Linked List
 7. Check if LL is a palindrome
 
+### Stacks
+
+1. [Stack Implementation](./lib/stacks/stack.rb)
+
 
 ---
 
