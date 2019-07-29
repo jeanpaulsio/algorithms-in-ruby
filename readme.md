@@ -53,6 +53,7 @@
 
 1. [Stack Implementation](./lib/stacks/stack.rb)
 2. [Find Number in Stack](./lib/stacks/find_number.rb)
+3. [Create Queue with 2 Stacks](./lib/stacks/two_stack_queue.rb)
 
 ---
 
