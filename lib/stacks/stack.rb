@@ -28,4 +28,14 @@ class Stack
   def size
     store.size
   end
+
+  def empty?
+    store.empty?
+  end
+
+  def self.generate(*values)
+    stack = self.new
+    values.each { |v| stack.push v }
+    stack
+  end
 end

@@ -52,7 +52,7 @@
 ### Stacks
 
 1. [Stack Implementation](./lib/stacks/stack.rb)
-
+2. [Find Number in Stack](./lib/stacks/find_number.rb)
 
 ---
 
