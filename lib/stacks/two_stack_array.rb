@@ -1,7 +1,5 @@
 # Problem:
-#
-# Given:
-# Result:
+# Use an array to implement two stacks
 
 class TwoStackArray
   class StackFullError < StandardError; end
