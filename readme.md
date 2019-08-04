@@ -56,6 +56,7 @@
 3. [Create Queue with 2 Stacks](./lib/stacks/two_stack_queue.rb)
 4. [Create 2 Stacks with Array](./lib/stacks/two_stack_array.rb)
 5. [Find Max in Stack](./lib/stacks/stack_with_max.rb)
+6. [Evaluate an Infix expression](./lib/stacks/evaluate_infix.rb)
 
 ---
 
@@ -81,10 +82,8 @@ If you prefer not to run tests manually, you can run:
 $ bundle exec guard
 ```
 
-
 ## Prettier-ing files
 
 ```bash
 bundle exec rbprettier --write '**/*.rb'
 ```
-
