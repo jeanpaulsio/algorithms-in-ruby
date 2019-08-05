@@ -58,6 +58,10 @@
 5. [Find Max in Stack](./lib/stacks/stack_with_max.rb)
 6. [Evaluate an Infix expression](./lib/stacks/evaluate_infix.rb)
 
+## Queues
+
+1. [Queue Implementation](./lib/queues/queue.rb)
+
 ---
 
 ## Getting Started
