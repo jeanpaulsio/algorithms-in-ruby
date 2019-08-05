@@ -1,17 +1,17 @@
-require_relative '../../test_helper'
-require_relative 'stack_with_max'
+require_relative "../../test_helper"
+require_relative "stack_with_max"
 
 describe StackWithMax do
-  describe 'edge cases' do
+  describe "edge cases" do
     # empty stack
   end
 
-  describe 'base cases' do
+  describe "base cases" do
     # stack with one value
   end
 
-  describe 'regular cases' do
-    it 'should keep track of the max value in the stack' do
+  describe "regular cases" do
+    it "should keep track of the max value in the stack" do
       stack = StackWithMax.new
       stack.push 1
       stack.push 1

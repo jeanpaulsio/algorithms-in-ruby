@@ -5,7 +5,7 @@
 # Given: 1, 2, 3, 4, 3, 2, 1
 # Result: 4
 
-require_relative 'stack'
+require_relative "stack"
 
 class StackWithMax < Stack
   attr_accessor :max_stack

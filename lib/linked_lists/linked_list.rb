@@ -1,4 +1,4 @@
-require_relative 'node'
+require_relative "node"
 
 class LinkedList
   attr_accessor :head, :tail
@@ -66,7 +66,7 @@ class LinkedList
     slow = self.head
 
     until fast.nil?
-      fast= fast.next
+      fast = fast.next
       break if fast == slow
 
       unless fast.nil?

@@ -1,21 +1,21 @@
-require_relative '../../test_helper'
-require_relative 'two_stack_array'
+require_relative "../../test_helper"
+require_relative "two_stack_array"
 
 describe TwoStackArray do
-  describe 'edge cases' do
+  describe "edge cases" do
     # empty array
     # full array
     # s1 empty / full
     # s2 empty / full
   end
 
-  describe 'base cases' do
+  describe "base cases" do
     # single element in s1/s2
     # array size 0, 1, 2
   end
 
-  describe 'regular cases' do
-    it 'should create two stacks with an array of size 10' do
+  describe "regular cases" do
+    it "should create two stacks with an array of size 10" do
       subject = TwoStackArray.new(10)
       subject.push(1, 1)
       subject.push(1, 2)

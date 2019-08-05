@@ -7,7 +7,7 @@
 #   List 1: 2 -> 4 -> 2 (odd nodes)
 #   List 2: 1 -> 5 -> 8 (even nodes)
 
-require_relative 'linked_list'
+require_relative "linked_list"
 
 class OddEven
   def self.run(list)

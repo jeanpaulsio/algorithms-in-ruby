@@ -4,8 +4,7 @@
 # Given: 2 -> 0 -> 1 -> 0 -> 2 -> 1
 # Result: 0 -> 0 -> 1 -> 1 -> 2 -> 2
 
-
-require_relative 'linked_list'
+require_relative "linked_list"
 
 class SortZeroOneTwo
   def self.run(list)

@@ -28,7 +28,7 @@ class MazePathHard
 
   private
 
-    def self.oob?(arr, i, j)
-      i < 0 || i >= arr.length || j < 0 || j >= arr[0].length
-    end
+  def self.oob?(arr, i, j)
+    i < 0 || i >= arr.length || j < 0 || j >= arr[0].length
+  end
 end

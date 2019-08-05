@@ -3,7 +3,7 @@
 # and 0s represent a path. See if you can reach the bottom right corner
 # starting from arr[0][0] only traversing down or right
 #
-# Given: 
+# Given:
 # [
 #   [0, 1, 1, 1],
 #   [0, 0, 0, 1],
@@ -31,7 +31,7 @@ class MazePathEasy
 
   private
 
-    def self.oob?(arr, i, j)
-      i < 0 || i >= arr.length || j < 0 || j >= arr[0].length
-    end
+  def self.oob?(arr, i, j)
+    i < 0 || i >= arr.length || j < 0 || j >= arr[0].length
+  end
 end

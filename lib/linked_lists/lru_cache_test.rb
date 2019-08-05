@@ -1,15 +1,15 @@
-require_relative '../../test_helper'
-require_relative 'lru_cache'
+require_relative "../../test_helper"
+require_relative "lru_cache"
 
 describe LruCache do
-  describe 'edge cases' do
+  describe "edge cases" do
   end
 
-  describe 'base cases' do
+  describe "base cases" do
   end
 
-  describe 'regular cases' do
-    it 'should read and write correctly' do
+  describe "regular cases" do
+    it "should read and write correctly" do
       # _h_ _t_
       capacity = 2
       cache = LruCache.new(capacity)

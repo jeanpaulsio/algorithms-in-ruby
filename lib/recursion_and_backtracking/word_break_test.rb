@@ -1,11 +1,11 @@
-require_relative '../../test_helper'
-require_relative 'word_break'
+require_relative "../../test_helper"
+require_relative "word_break"
 
 describe WordBreak do
-  describe 'base cases' do
-    it 'should break correctly for a single letter' do
+  describe "base cases" do
+    it "should break correctly for a single letter" do
       dictionary = { :i => true }
-      sentence = 'i'
+      sentence = "i"
 
       expected = "i\n"
       subject = -> { WordBreak.run(dictionary, sentence, sentence.length, "") }
@@ -13,16 +13,16 @@ describe WordBreak do
     end
   end
 
-  describe 'regular cases' do
-    it 'should break twice' do
+  describe "regular cases" do
+    it "should break twice" do
       dictionary = {
-        :cat  => true,
+        :cat => true,
         :cats => true,
-        :and  => true,
+        :and => true,
         :sand => true,
-        :dog  => true,
+        :dog => true,
       }
-      sentence = 'catsanddog'
+      sentence = "catsanddog"
 
       a = "cat sand dog\n"
       b = "cats and dog\n"
@@ -31,17 +31,17 @@ describe WordBreak do
       expect(subject).must_output a + b
     end
 
-    it 'should break correctly for full sentences' do
+    it "should break correctly for full sentences" do
       dictionary = {
-        :i        => true,
-        :like     => true,
-        :ice      => true,
-        :cream    => true,
+        :i => true,
+        :like => true,
+        :ice => true,
+        :cream => true,
         :icecream => true,
-        :and      => true,
-        :man      => true,
-        :go       => true,
-        :mango    => true
+        :and => true,
+        :man => true,
+        :go => true,
+        :mango => true,
       }
       sentence = "ilikeicecreamandmango"
 

@@ -9,7 +9,7 @@ class ArrayPeak
   def self.run(arr)
     return nil if arr.empty?
     return arr.first if arr.length == 1
-    
+
     low = 0
     high = arr.length - 1
 

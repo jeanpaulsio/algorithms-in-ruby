@@ -25,8 +25,7 @@ class ArraySubsets
 
   private
 
-    def self.print_buffer(buffer, buffer_index)
-      p buffer[0, buffer_index]
-    end
+  def self.print_buffer(buffer, buffer_index)
+    p buffer[0, buffer_index]
+  end
 end
-

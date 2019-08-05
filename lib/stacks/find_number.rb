@@ -4,7 +4,7 @@
 # Given: n = 3, stack = [1, 2, 3, 4, 5]
 # Result: true
 
-require_relative 'stack'
+require_relative "stack"
 
 class FindNumber
   def self.run(n, stack)

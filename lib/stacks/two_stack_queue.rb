@@ -1,6 +1,6 @@
 # Problem:
 # Implement a Queue using two stacks
-# 
+#
 # Queues are FIFO
 # 5 -> 4 -> 3 -> 2 -> 1
 #
@@ -10,7 +10,7 @@
 # Dequeue
 # 6 -> 5 -> 4 -> 3 -> 2
 
-require_relative 'stack'
+require_relative "stack"
 
 class TwoStackQueue
   class EmptyQueueError < StandardError; end

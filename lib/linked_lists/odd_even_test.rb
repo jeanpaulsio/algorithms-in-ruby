@@ -1,14 +1,14 @@
-require_relative '../../test_helper'
-require_relative 'linked_list'
-require_relative 'odd_even'
+require_relative "../../test_helper"
+require_relative "linked_list"
+require_relative "odd_even"
 
 describe OddEven do
   subject do
     OddEven.run(LinkedList.generate(2, 1, 4, 5, 2, 8))
   end
 
-  describe 'regular cases' do
-    it 'should return two lists' do
+  describe "regular cases" do
+    it "should return two lists" do
       odd, even = subject
 
       odd_lambda = lambda do
