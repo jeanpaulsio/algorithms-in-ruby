@@ -62,6 +62,7 @@
 
 1. [Queue Implementation](./lib/queues/queue.rb)
 2. [Sliding Window Sums](./lib/queues/sliding_window_sums.rb)
+3. Stock Prices
 
 ---
 
