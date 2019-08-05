@@ -63,6 +63,8 @@
 1. [Queue Implementation](./lib/queues/queue.rb)
 2. [Sliding Window Sums](./lib/queues/sliding_window_sums.rb)
 3. Stock Prices
+4. [Queue With Max](./lib/queues/find_max.rb)
+5. Max of Sliding Window
 
 ---
 
