@@ -6,16 +6,6 @@
 
 ---
 
-## Getting Started
-
-```bash
-git clone https://github.com/jeanpaulsio/algorithms_in_ruby.git
-bundle install
-asdf install
-overcommit install
-overcommit --sign
-```
-
 ## Running Tests
 
 ```bash
