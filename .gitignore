@@ -1,3 +1,5 @@
+vendor
+.bundle
 .vscode
 .ds_store
 *.swp
