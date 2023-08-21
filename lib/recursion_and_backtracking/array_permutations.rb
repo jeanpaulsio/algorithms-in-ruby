@@ -14,13 +14,13 @@ class ArrayPermutations
     end
 
     arr.each_with_index do |i, index|
-      unless buffer_check[index]
-        buffer[buffer_index] = i
-        buffer_check[index] = true
+      next if buffer_check[index]
 
-        run(arr, buffer, buffer_index + 1, buffer_check)
-        buffer_check[index] = false
-      end
+      buffer[buffer_index] = i
+      buffer_check[index] = true
+
+      run(arr, buffer, buffer_index + 1, buffer_check)
+      buffer_check[index] = false
     end
   end
 end

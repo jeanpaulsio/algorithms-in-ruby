@@ -13,9 +13,7 @@ class PrintCombos
       return
     end
 
-    if next_index == arr.length
-      return
-    end
+    return if next_index == arr.length
 
     next_index.upto(arr.length - 1) do |i|
       buffer[buffer_index] = arr[i]

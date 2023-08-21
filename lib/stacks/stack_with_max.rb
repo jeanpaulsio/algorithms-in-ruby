@@ -16,9 +16,7 @@ class StackWithMax < Stack
   end
 
   def push(element)
-    if max_stack.empty? || max_stack.peek <= element
-      max_stack.push(element)
-    end
+    max_stack.push(element) if max_stack.empty? || max_stack.peek <= element
 
     super(element)
   end

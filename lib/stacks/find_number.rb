@@ -22,9 +22,7 @@ class FindNumber
       temp_stack.push(stack.pop)
     end
 
-    until temp_stack.empty?
-      stack.push(temp_stack.pop)
-    end
+    stack.push(temp_stack.pop) until temp_stack.empty?
 
     result
   end

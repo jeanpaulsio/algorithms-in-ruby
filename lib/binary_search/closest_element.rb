@@ -35,6 +35,6 @@ class ClosestElement
       end
     end
 
-    return result
+    result
   end
 end

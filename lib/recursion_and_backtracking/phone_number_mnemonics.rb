@@ -22,17 +22,13 @@ class PhoneNumberMnemonics
 
     letters = letters_map[arr[next_index]]
 
-    if letters.empty?
-      run(arr, buffer, next_index + 1, buffer_index)
-    end
+    run(arr, buffer, next_index + 1, buffer_index) if letters.empty?
 
     letters.each do |letter|
       buffer[buffer_index] = letter
       run(arr, buffer, next_index + 1, buffer_index + 1)
     end
   end
-
-  private
 
   def self.letters_map
     {
@@ -45,7 +41,7 @@ class PhoneNumberMnemonics
       7 => %w[P Q R S],
       8 => %w[T U V],
       9 => %w[W X Y Z],
-      0 => %w[],
+      0 => %w[]
     }
   end
 end

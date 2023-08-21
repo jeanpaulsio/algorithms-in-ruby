@@ -9,13 +9,13 @@ class TwoSum
     i = 0
     j = arr.length - 1
 
-    while (i < j)
+    while i < j
       sum = arr[i] + arr[j]
       i += 1 if sum < target
       j -= 1 if sum > target
       return [i, j] if sum == target
     end
 
-    return nil
+    nil
   end
 end

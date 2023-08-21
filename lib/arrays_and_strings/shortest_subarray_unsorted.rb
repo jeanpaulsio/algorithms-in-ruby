@@ -17,12 +17,14 @@ class ShortestSubarrayUnsorted
       end
 
       break if arr[i + 1] <= item
+
       i += 1
     end
 
     # find bump
     arr.reverse_each do |item|
       break if arr[j - 1] > item
+
       j -= 1
     end
 
@@ -32,11 +34,11 @@ class ShortestSubarrayUnsorted
     max = arr[i..j].max
 
     # expands the dip left
-    i -= 1 while (i > 0 && arr[i - 1] > min)
+    i -= 1 while i > 0 && arr[i - 1] > min
 
     # expand the bump right
-    j += 1 while (j < arr.length - 1 && arr[j + 1] < max)
+    j += 1 while j < arr.length - 1 && arr[j + 1] < max
 
-    return [i, j]
+    [i, j]
   end
 end

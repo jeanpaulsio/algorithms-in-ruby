@@ -17,14 +17,14 @@ class WordBreak
   def self.run(dictionary, sentence, n, result)
     1.upto(n) do |i|
       prefix = sentence[0...i]
-      if dictionary[prefix.to_sym]
-        if i == n
-          result += prefix
-          puts result
-          return
-        end
-        run(dictionary, sentence[i..n - 1], n - i, result + prefix + " ")
+      next unless dictionary[prefix.to_sym]
+
+      if i == n
+        result += prefix
+        puts result
+        return
       end
+      run(dictionary, sentence[i..n - 1], n - i, result + prefix + " ")
     end
   end
 end

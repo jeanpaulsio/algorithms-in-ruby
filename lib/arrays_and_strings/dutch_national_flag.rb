@@ -17,7 +17,7 @@ class DutchNationalFlag
 
     target = arr[index]
 
-    while (mid + 1 < hi)
+    while mid + 1 < hi
       if arr[mid + 1] < target
         arr[mid + 1], arr[lo + 1] = arr[lo + 1], arr[mid + 1]
         lo += 1

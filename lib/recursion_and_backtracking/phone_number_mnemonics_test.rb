@@ -56,7 +56,7 @@ describe PhoneNumberMnemonics do
         %w[B F G], %w[B F H], %w[B F I],
         %w[C D G], %w[C D H], %w[C D I],
         %w[C E G], %w[C E H], %w[C E I],
-        %w[C F G], %w[C F H], %w[C F I],
+        %w[C F G], %w[C F H], %w[C F I]
       )
       subject = -> { PhoneNumberMnemonics.run([2, 3, 4], Array.new(3), 0, 0) }
       expect(subject).must_output expected
@@ -72,7 +72,7 @@ describe PhoneNumberMnemonics do
         %w[B F G], %w[B F H], %w[B F I],
         %w[C D G], %w[C D H], %w[C D I],
         %w[C E G], %w[C E H], %w[C E I],
-        %w[C F G], %w[C F H], %w[C F I],
+        %w[C F G], %w[C F H], %w[C F I]
       )
       subject = -> { PhoneNumberMnemonics.run([0, 1, 2, 3, 4], Array.new(3), 0, 0) }
       expect(subject).must_output expected

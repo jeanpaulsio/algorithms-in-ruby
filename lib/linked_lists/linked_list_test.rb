@@ -15,7 +15,7 @@ describe LinkedList do
 
     describe "when querying an empty list" do
       it "should print an error message" do
-        -> { LinkedList.new.get(1) }.must_output(/No node at index 1/)
+        _ { LinkedList.new.get(1) }.must_output(/No node at index 1/)
       end
     end
   end

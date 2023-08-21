@@ -23,17 +23,13 @@ class EvaluateInfix
       if is_operand? char
         operands.push char
       elsif is_operator? char
-        while !operators.empty? && precedence(operators.peek) >= precedence(char)
-          process(operators, operands)
-        end
+        process(operators, operands) while !operators.empty? && precedence(operators.peek) >= precedence(char)
 
         operators.push char
       end
     end
 
-    until operators.empty?
-      process(operators, operands)
-    end
+    process(operators, operands) until operators.empty?
 
     operands.pop.to_i
   end
@@ -41,17 +37,18 @@ class EvaluateInfix
   private
 
   def is_operator?(char)
-    char == "+" || char == "-" || char == "/" || char == "*"
+    ["+", "-", "/", "*"].include?(char)
   end
 
   def is_operand?(char)
     return false if is_operator?(char)
+
     char >= "0" || char <= "9"
   end
 
   def precedence(char)
-    return 2 if char == "/" || char == "*"
-    return 1 if char == "+" || char == "-"
+    return 2 if ["/", "*"].include?(char)
+    return 1 if ["+", "-"].include?(char)
   end
 
   def process(operator_stack, operand_stack)
