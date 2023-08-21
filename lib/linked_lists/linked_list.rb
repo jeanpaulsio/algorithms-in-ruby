@@ -43,7 +43,7 @@ class LinkedList
     tail.next = target_node
   end
 
-  def has_cycle?
+  def cycle?
     fast = head
     slow = head
 

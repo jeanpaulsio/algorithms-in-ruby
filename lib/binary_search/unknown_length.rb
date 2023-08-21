@@ -16,7 +16,7 @@ class UnknownLength
     high = 0
 
     upper_limit = 1
-    while true
+    loop do
       break if arr[upper_limit].nil?
 
       upper_limit *= 2

@@ -27,7 +27,11 @@ class TwoStackQueue
   end
 
   def dequeue
-    stack_b.push stack_a.pop until stack_a.empty? if stack_b.empty?
+    if stack_b.empty?
+      until stack_a.empty?
+        stack_b.push(stack_a.pop)
+      end
+    end
 
     raise EmptyQueueError if stack_b.empty?
 

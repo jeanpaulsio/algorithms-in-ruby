@@ -1,6 +1,7 @@
 AllCops:
   TargetRubyVersion: 3.1.2
   NewCops: disable
+  SuggestExtensions: false
   Exclude:
     - "**/scripts/**/*"
 
@@ -28,9 +29,8 @@ Layout/MultilineMethodCallIndentation:
 Lint/ConstantDefinitionInBlock:
   Enabled: true
 
-Lint/MissingSuper:
-  Exclude:
-    - 'app/services/**/*'
+Lint/NonLocalExitFromIterator:
+  Enabled: false
 
 Lint/UselessMethodDefinition:
   Enabled: true
@@ -62,7 +62,16 @@ Metrics/PerceivedComplexity:
 Naming/VariableNumber:
   Enabled: false
 
+Naming/MethodParameterName:
+  MinNameLength: 1
+
 # Style/*
+Style/WhileUntilModifier:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
 Style/HashSyntax:
   Enabled: true
   EnforcedShorthandSyntax: either

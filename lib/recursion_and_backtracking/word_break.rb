@@ -24,7 +24,7 @@ class WordBreak
         puts result
         return
       end
-      run(dictionary, sentence[i..n - 1], n - i, result + prefix + " ")
+      run(dictionary, sentence[i..n - 1], n - i, "#{result}#{prefix} ")
     end
   end
 end

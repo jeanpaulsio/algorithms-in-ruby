@@ -20,9 +20,9 @@ class EvaluateInfix
     return 0 if expression.empty?
 
     expression.each do |char|
-      if is_operand? char
+      if operand? char
         operands.push char
-      elsif is_operator? char
+      elsif operator? char
         process(operators, operands) while !operators.empty? && precedence(operators.peek) >= precedence(char)
 
         operators.push char
@@ -36,12 +36,12 @@ class EvaluateInfix
 
   private
 
-  def is_operator?(char)
+  def operator?(char)
     ["+", "-", "/", "*"].include?(char)
   end
 
-  def is_operand?(char)
-    return false if is_operator?(char)
+  def operand?(char)
+    return false if operator?(char)
 
     char >= "0" || char <= "9"
   end
@@ -58,13 +58,14 @@ class EvaluateInfix
     op = operator_stack.pop
     result = 0
 
-    if op == "/"
+    case op
+    when "/"
       result = i / j
-    elsif op == "*"
+    when "*"
       result = i * j
-    elsif op == "+"
+    when "+"
       result = i + j
-    elsif op == "-"
+    when "-"
       result = i - j
     end
 
