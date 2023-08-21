@@ -11,7 +11,7 @@ describe CloneEvenNumbers do
 
     it "should work for single even item" do
       expected = [2, 2]
-      actual = CloneEvenNumbers.run([2, -1])
+      actual = CloneEvenNumbers.run([2])
       expect(actual).must_equal expected
     end
   end
@@ -19,7 +19,7 @@ describe CloneEvenNumbers do
   describe "regular cases" do
     it "should clone even numbers" do
       expected = [1, 2, 2, 3, 4, 4, 5]
-      actual = CloneEvenNumbers.run([1, 2, 3, 4, 5, -1, -1])
+      actual = CloneEvenNumbers.run([1, 2, 3, 4, 5])
       expect(actual).must_equal expected
     end
   end
