@@ -29,7 +29,7 @@ class TwoStackQueue
   def dequeue
     if stack_b.empty?
       until stack_a.empty?
-        stack_b.push stack_a.pop
+        stack_b.push(stack_a.pop)
       end
     end
 

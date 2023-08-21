@@ -15,7 +15,7 @@ describe LinkedList do
 
     describe "when querying an empty list" do
       it "should print an error message" do
-        -> { LinkedList.new.get(1) }.must_output(/No node at index 1/)
+        _ { LinkedList.new.get(1) }.must_output(/No node at index 1/)
       end
     end
   end
@@ -100,19 +100,19 @@ describe LinkedList do
     end
   end
 
-  describe "#has_cycle?" do
+  describe "#cycle?" do
     subject { LinkedList.generate(1, 2, 3, 4, 5) }
 
     it "should return true when cycle exists" do
       target_node = subject.get(3)
       subject.create_cycle_at(target_node)
 
-      expect(subject.has_cycle?).must_equal true
+      expect(subject.cycle?).must_equal true
       expect(subject.tail.next).wont_be_nil
     end
 
     it "should return false when cycle does not exist" do
-      expect(subject.has_cycle?).wont_equal true
+      expect(subject.cycle?).wont_equal true
       expect(subject.tail.next).must_be_nil
     end
   end

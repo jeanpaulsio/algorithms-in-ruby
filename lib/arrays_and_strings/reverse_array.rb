@@ -6,7 +6,7 @@ class ReverseArray
     i = 0
     j = arr.length - 1
 
-    while (i < j)
+    while i < j
       arr[i], arr[j] = arr[j], arr[i]
       i += 1
       j -= 1

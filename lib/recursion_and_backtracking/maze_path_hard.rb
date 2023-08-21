@@ -14,7 +14,7 @@ class MazePathHard
       [i + 1, j],
       [i - 1, j],
       [i, j + 1],
-      [i, j - 1],
+      [i, j - 1]
     ]
 
     points.each do |point|
@@ -25,8 +25,6 @@ class MazePathHard
 
     path_so_far["#{i}#{j}"] = false
   end
-
-  private
 
   def self.oob?(arr, i, j)
     i < 0 || i >= arr.length || j < 0 || j >= arr[0].length

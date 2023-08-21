@@ -4,7 +4,7 @@ require_relative "word_break"
 describe WordBreak do
   describe "base cases" do
     it "should break correctly for a single letter" do
-      dictionary = { :i => true }
+      dictionary = { i: true }
       sentence = "i"
 
       expected = "i\n"
@@ -16,11 +16,11 @@ describe WordBreak do
   describe "regular cases" do
     it "should break twice" do
       dictionary = {
-        :cat => true,
-        :cats => true,
-        :and => true,
-        :sand => true,
-        :dog => true,
+        cat: true,
+        cats: true,
+        and: true,
+        sand: true,
+        dog: true
       }
       sentence = "catsanddog"
 
@@ -33,15 +33,15 @@ describe WordBreak do
 
     it "should break correctly for full sentences" do
       dictionary = {
-        :i => true,
-        :like => true,
-        :ice => true,
-        :cream => true,
-        :icecream => true,
-        :and => true,
-        :man => true,
-        :go => true,
-        :mango => true,
+        i: true,
+        like: true,
+        ice: true,
+        cream: true,
+        icecream: true,
+        and: true,
+        man: true,
+        go: true,
+        mango: true
       }
       sentence = "ilikeicecreamandmango"
 

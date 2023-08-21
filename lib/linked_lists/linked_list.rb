@@ -8,7 +8,8 @@ class LinkedList
 
     begin
       raise IndexError if node.nil?
-      (n - 1).times { |i| node = node.next }
+
+      (n - 1).times { |_i| node = node.next }
     rescue IndexError
       puts "No node at index #{n}"
     end
@@ -27,7 +28,7 @@ class LinkedList
 
   def delete(node, prev_node)
     if node.nil?
-      return
+      nil
     elsif node == head && prev_node.nil?
       self.head = node.next
     elsif node == tail
@@ -39,12 +40,12 @@ class LinkedList
   end
 
   def create_cycle_at(target_node)
-    self.tail.next = target_node
+    tail.next = target_node
   end
 
-  def has_cycle?
-    fast = self.head
-    slow = self.head
+  def cycle?
+    fast = head
+    slow = head
 
     until fast.nil?
       fast = fast.next
@@ -62,8 +63,8 @@ class LinkedList
   end
 
   def cycle_length
-    fast = self.head
-    slow = self.head
+    fast = head
+    slow = head
 
     until fast.nil?
       fast = fast.next
@@ -89,13 +90,14 @@ class LinkedList
   end
 
   def median
-    fast = self.head
-    slow = self.head
+    fast = head
+    slow = head
 
     until fast.nil?
       fast = fast.next
       fast = fast.next unless fast.nil?
       break if fast.nil?
+
       slow = slow.next unless slow.next.nil?
     end
 
@@ -104,8 +106,8 @@ class LinkedList
 
   def cycle_head
     # Initialize two pointers
-    fast = self.head
-    slow = self.head
+    fast = head
+    slow = head
 
     # Move the fast pointer the cycle length
     # By the time the fast pointer reaches the "tail",
@@ -122,7 +124,7 @@ class LinkedList
   end
 
   def self.generate(*values)
-    list = self.new
+    list = new
     values.each { |v| list.append Node.new(v) }
     list
   end

@@ -34,7 +34,7 @@ class Stack
   end
 
   def self.generate(*values)
-    stack = self.new
+    stack = new
     values.each { |v| stack.push v }
     stack
   end

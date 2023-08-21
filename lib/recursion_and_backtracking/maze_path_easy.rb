@@ -18,18 +18,12 @@ class MazePathEasy
     return false if oob?(arr, i, j) || arr[i][j] == 1
     return true if i == arr.length - 1 && j == arr.length - 1
 
-    if run(arr, i + 1, j)
-      return true
-    end
+    return true if run(arr, i + 1, j)
 
-    if run(arr, i, j + 1)
-      return true
-    end
+    return true if run(arr, i, j + 1)
 
     false
   end
-
-  private
 
   def self.oob?(arr, i, j)
     i < 0 || i >= arr.length || j < 0 || j >= arr[0].length

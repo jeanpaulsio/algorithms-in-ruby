@@ -8,7 +8,7 @@ class Queue
 
   attr_accessor :store, :front, :back, :q_length
 
-  def initialize(size:)
+  def initialize(size: 0)
     @store = Array.new(size)
     @front = 0
     @back = 0
@@ -17,6 +17,7 @@ class Queue
 
   def enqueue(element)
     raise QueueFullError if q_length == store.length
+
     store[back] = element
     self.back = (back + 1) % store.length
     self.q_length += 1
@@ -24,6 +25,7 @@ class Queue
 
   def dequeue
     raise QueueEmptyError if q_length.zero?
+
     element = store[front]
     self.front = (front + 1) % store.length
     self.q_length -= 1

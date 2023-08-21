@@ -1,0 +1,103 @@
+AllCops:
+  TargetRubyVersion: 3.1.2
+  NewCops: disable
+  SuggestExtensions: false
+  Exclude:
+    - "**/scripts/**/*"
+
+# Layout/*
+Layout/ArgumentAlignment:
+  Enabled: true
+  EnforcedStyle: with_fixed_indentation
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
+
+Layout/FirstArrayElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
+
+# Lint/*
+Lint/ConstantDefinitionInBlock:
+  Enabled: true
+
+Lint/NonLocalExitFromIterator:
+  Enabled: false
+
+Lint/UselessMethodDefinition:
+  Enabled: true
+
+# Metrics/*
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: true
+  Max: 250
+
+Metrics/MethodLength:
+  Enabled: false
+  CountAsOne: ['array', 'hash', 'heredoc']
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 18
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 18
+
+# Naming/*
+Naming/VariableNumber:
+  Enabled: false
+
+Naming/MethodParameterName:
+  MinNameLength: 1
+
+# Style/*
+Style/WhileUntilModifier:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: true
+  EnforcedShorthandSyntax: either
+
+Style/DoubleNegation:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: true
+  EnforcedStyle: literal
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/FormatStringToken:
+  Enabled: false

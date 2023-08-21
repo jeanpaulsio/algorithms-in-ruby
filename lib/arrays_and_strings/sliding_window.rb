@@ -20,7 +20,7 @@ class SlidingWindow
       elsif sum < target
         if j + 1 < arr.length
           j += 1
-          sum = sum + arr[j]
+          sum += arr[j]
         else
           next
         end
@@ -32,6 +32,6 @@ class SlidingWindow
       end
     end
 
-    return nil
+    nil
   end
 end

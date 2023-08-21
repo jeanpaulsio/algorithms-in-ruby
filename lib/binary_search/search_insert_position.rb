@@ -22,6 +22,6 @@ class SearchInsertPosition
       end
     end
 
-    return low
+    low
   end
 end

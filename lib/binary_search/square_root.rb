@@ -7,7 +7,9 @@
 
 class SquareRoot
   def self.run(i)
-    result, low, high = [0, 0, i]
+    result = 0
+    low = 0
+    high = i
 
     while low <= high
       mid = low + (high - low) / 2

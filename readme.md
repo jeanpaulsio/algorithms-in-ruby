@@ -89,9 +89,3 @@ If you prefer not to run tests manually, you can run:
 ```
 $ bundle exec guard
 ```
-
-## Prettier-ing files
-
-```bash
-bundle exec rbprettier --write '**/*.rb'
-```

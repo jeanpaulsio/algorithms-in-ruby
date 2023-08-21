@@ -12,7 +12,7 @@ class SlidingWindowSums
     q = Queue.new(size: k)
     sum = 0
 
-    arr.each_with_index do |n, index|
+    arr.each_with_index do |n, _index|
       if q.q_length < k
         q.enqueue(n)
         sum += n

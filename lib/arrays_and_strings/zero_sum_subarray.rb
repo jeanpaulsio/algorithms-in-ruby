@@ -21,6 +21,6 @@ class ZeroSumSubarray
       hsh[sum] = index
     end
 
-    return nil
+    nil
   end
 end

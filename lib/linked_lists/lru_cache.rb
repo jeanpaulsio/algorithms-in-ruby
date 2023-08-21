@@ -30,7 +30,7 @@ class LruCache
   # Write a value to the cache
   def write(key, value)
     # Cache is full, evict the head from linked hash table
-    remove(self.head.key) if map.size == capacity
+    remove(head.key) if map.size == capacity
 
     # Add to front of linked hash table
     add(key, value)
@@ -58,7 +58,7 @@ class LruCache
     if head.nil?
       self.head = node
     else
-      self.tail.next = node
+      tail.next = node
       node.prev = tail
     end
 
@@ -67,9 +67,9 @@ class LruCache
 
   # Removes a node from a DLL
   def remove_from_linked_list(node)
-    node.prev.next = node.next if !node.prev.nil?
-    node.next.prev = node.prev if !node.next.nil?
-    self.head = node.next if node == self.head
-    self.tail = node.prev if node == self.tail
+    node.prev.next = node.next unless node.prev.nil?
+    node.next.prev = node.prev unless node.next.nil?
+    self.head = node.next if node == head
+    self.tail = node.prev if node == tail
   end
 end

@@ -13,7 +13,7 @@ describe MazePathHard do
         [0, 1, 1, 1, 0],
         [0, 0, 0, 1, 0],
         [1, 0, 0, 0, 0],
-        [1, 1, 1, 0, 0],
+        [1, 1, 1, 0, 0]
       ]
       actual = MazePathHard.run(arr, 0, 0, {})
       expect(actual).must_equal true
@@ -23,7 +23,7 @@ describe MazePathHard do
   describe "base cases" do
     it "should work for single length map with only a path" do
       arr = [
-        [0],
+        [0]
       ]
       actual = MazePathHard.run(arr, 0, 0, {})
       expect(actual).must_equal true
@@ -31,7 +31,7 @@ describe MazePathHard do
 
     it "should work for single length map with only a wall" do
       arr = [
-        [1],
+        [1]
       ]
       actual = MazePathHard.run(arr, 0, 0, {})
       expect(actual).must_equal false
@@ -40,7 +40,7 @@ describe MazePathHard do
     it "should find path for double length map" do
       arr = [
         [0, 0],
-        [1, 0],
+        [1, 0]
       ]
       actual = MazePathHard.run(arr, 0, 0, {})
       expect(actual).must_equal true
@@ -53,7 +53,7 @@ describe MazePathHard do
         [1, 1, 1, 1],
         [1, 1, 1, 1],
         [1, 1, 1, 1],
-        [1, 1, 1, 1],
+        [1, 1, 1, 1]
       ]
       actual = MazePathHard.run(arr, 0, 0, {})
       expect(actual).must_equal false
@@ -64,7 +64,7 @@ describe MazePathHard do
         [0, 0, 0, 0],
         [0, 0, 0, 0],
         [0, 0, 0, 0],
-        [0, 0, 0, 0],
+        [0, 0, 0, 0]
       ]
       actual = MazePathHard.run(arr, 0, 0, {})
       expect(actual).must_equal true
@@ -75,7 +75,7 @@ describe MazePathHard do
         [0, 1, 1, 1],
         [0, 0, 0, 1],
         [1, 0, 0, 0],
-        [1, 1, 1, 0],
+        [1, 1, 1, 0]
       ]
       actual = MazePathHard.run(arr, 0, 0, {})
       expect(actual).must_equal true
@@ -86,7 +86,7 @@ describe MazePathHard do
         [0, 1, 1, 1],
         [0, 0, 0, 1],
         [1, 0, 0, 0],
-        [1, 1, 1, 1],
+        [1, 1, 1, 1]
       ]
       actual = MazePathHard.run(arr, 0, 0, {})
       expect(actual).must_equal false
@@ -99,7 +99,7 @@ describe MazePathHard do
         [1, 0, 0, 0, 1, 1],
         [1, 0, 1, 1, 1, 1],
         [1, 0, 1, 1, 1, 1],
-        [1, 0, 0, 0, 0, 0],
+        [1, 0, 0, 0, 0, 0]
       ]
       actual = MazePathHard.run(arr, 0, 0, {})
       expect(actual).must_equal true

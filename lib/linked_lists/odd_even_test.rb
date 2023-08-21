@@ -11,7 +11,7 @@ describe OddEven do
     it "should return two lists" do
       odd, even = subject
 
-      odd_lambda = lambda do
+      odd_lambda = -> do
         until odd.head.nil?
           puts odd.head.value
           odd.head = odd.head.next
@@ -19,7 +19,7 @@ describe OddEven do
       end
       odd_lambda.must_output(/2\s4\s2/)
 
-      even_lambda = lambda do
+      even_lambda = -> do
         until even.head.nil?
           puts even.head.value
           even.head = even.head.next
