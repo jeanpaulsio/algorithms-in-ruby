@@ -8,13 +8,13 @@
       <td>Clone Even Numbers</td>
       <td>Takes an array of numbers and duplicates every even number</td>
       <td><a href="./lib/arrays_and_strings/clone_even_numbers.rb">Algorithm</a></td>
-      <td><a href="./lib/arrays_and_strings/clone_even_numbers_test.rb">Tests</a></td>
+      <td><a href="./lib/arrays_and_strings/clone_even_numbers_test.rb">Test Cases</a></td>
     </tr>
     <tr>
       <td>Reverse Words</td>
-      <td>Reverses the words in a sentence</td>
+      <td>Takes a sentence and reverses the order of the words</td>
       <td><a href="./lib/arrays_and_strings/reverse_words.rb">Algorithm</a></td>
-      <td><a href="./lib/arrays_and_strings/reverse_words_test.rb">Tests</a></td>
+      <td><a href="./lib/arrays_and_strings/reverse_words_test.rb">Test Cases</a></td>
     </tr>
   </tbody>
 </table>
