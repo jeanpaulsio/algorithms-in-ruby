@@ -2,10 +2,27 @@
 
 ### Arrays and Strings
 
-| Name | Algorithm | Test |
-|------|-----------|------|
-| Clone Even Numbers | [Algorithm](./lib/arrays_and_strings/clone_even_numbers.rb) | [Test](./lib/arrays_and_strings/clone_even_numbers_test.rb) |
-| Reverse Words | [Algorithm](./lib/arrays_and_strings/reverse_words.rb) | [Test](./lib/arrays_and_strings/reverse_words_test.rb) |
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Algorithm</th>
+      <th>Test</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Clone Even Numbers</td>
+      <td><a href="./lib/arrays_and_strings/clone_even_numbers.rb">Algorithm</a></td>
+      <td><a href="./lib/arrays_and_strings/clone_even_numbers_test.rb">Test</a></td>
+    </tr>
+    <tr>
+      <td>Reverse Words</td>
+      <td><a href="./lib/arrays_and_strings/reverse_words.rb">Algorithm</a></td>
+      <td><a href="./lib/arrays_and_strings/reverse_words_test.rb">Test</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
