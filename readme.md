@@ -36,6 +36,12 @@
       <td>Finds two numbers in a sorted array that sum to a given target integer</td>
       <td>🌟</td>
     </tr>
+    <tr>
+      <td><a href="./lib/arrays_and_strings/sorted_squares.rb">Sorted Squares</a></td>
+      <td>Array Traversal from Both Ends</td>
+      <td>Takes a sorted array of negative and positive integers and returns a sorted array of their squares</td>
+      <td>🌟</td>
+    </tr>
   </tbody>
 </table>
 
