@@ -3,18 +3,23 @@
 ### Arrays and Strings
 
 <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Technique</th>
+      <th>Description</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>Clone Even Numbers</td>
+      <td><a href="./lib/arrays_and_strings/clone_even_numbers.rb">Clone Even Numbers</a></td>
+      <td>Reverse Array Traversal</td>
       <td>Takes an array of numbers and duplicates every even number</td>
-      <td><a href="./lib/arrays_and_strings/clone_even_numbers.rb">Algorithm</a></td>
-      <td><a href="./lib/arrays_and_strings/clone_even_numbers_test.rb">Tests</a></td>
     </tr>
     <tr>
-      <td>Reverse Words</td>
+      <td><a href="./lib/arrays_and_strings/reverse_words.rb">Reverse Words</a></td>
+      <td>Reverse Array Traversal</td>
       <td>Takes a sentence and reverses the order of the words</td>
-      <td><a href="./lib/arrays_and_strings/reverse_words.rb">Algorithm</a></td>
-      <td><a href="./lib/arrays_and_strings/reverse_words_test.rb">Tests</a></td>
     </tr>
   </tbody>
 </table>
