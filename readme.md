@@ -8,7 +8,7 @@
       <th>Name</th>
       <th>Technique</th>
       <th>Description</th>
-      <th>Difficulty</th>
+      <th>Level</th>
     </tr>
   </thead>
   <tbody>
