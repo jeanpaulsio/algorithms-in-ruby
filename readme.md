@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Technique</th>
       <th>Description</th>
+      <th>Difficulty</th>
     </tr>
   </thead>
   <tbody>
@@ -15,11 +16,19 @@
       <td><a href="./lib/arrays_and_strings/clone_even_numbers.rb">Clone Even Numbers</a></td>
       <td>Reverse Array Traversal</td>
       <td>Takes an array of numbers and duplicates every even number</td>
+      <td>Easy</td>
     </tr>
     <tr>
       <td><a href="./lib/arrays_and_strings/reverse_words.rb">Reverse Words</a></td>
       <td>Reverse Array Traversal</td>
       <td>Takes a sentence and reverses the order of the words</td>
+      <td>Easy</td>
+    </tr>
+    <tr>
+      <td><a href="./lib/arrays_and_strings/reverse_array.rb">Reverse Array</a></td>
+      <td>Array Traversal from Both Ends</td>
+      <td>Takes an array and reverses it in place</td>
+      <td>Easy</td>
     </tr>
   </tbody>
 </table>
