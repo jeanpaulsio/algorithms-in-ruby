@@ -2,8 +2,10 @@
 
 ### Arrays and Strings
 
-1. [Clone Even Numbers](./lib/arrays_and_strings/clone_even_numbers.rb)
-2. [Reverse Words](./lib/arrays_and_strings/reverse_words.rb)
+| Name | Algorithm | Test |
+|------|-----------|------|
+| Clone Even Numbers | [Algorithm](./lib/arrays_and_strings/clone_even_numbers.rb) | [Test](./lib/arrays_and_strings/clone_even_numbers_test.rb) |
+| Reverse Words | [Algorithm](./lib/arrays_and_strings/reverse_words.rb) | [Test](./lib/arrays_and_strings/reverse_words_test.rb) |
 
 ---
 
