@@ -41,7 +41,7 @@ class NewAlg
       file.puts "require_relative '#{class_name}'"
       file.puts
       file.puts "describe #{camelize class_name} do"
-      file.puts "  describe 'edge cases' do"
+      file.puts "  describe 'corner cases' do"
       file.puts "  end"
       file.puts
       file.puts "  describe 'base cases' do"
