@@ -3,18 +3,11 @@
 ### Arrays and Strings
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Algorithm</th>
-      <th>Test</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>Clone Even Numbers</td>
       <td><a href="./lib/arrays_and_strings/clone_even_numbers.rb">Algorithm</a></td>
-      <td><a href="./lib/arrays_and_strings/clone_even_numbers_test.rb">Test</a></td>
+      <td><a href="./lib/arrays_and_strings/clone_even_numbers_test.rb">Tests</a></td>
     </tr>
     <tr>
       <td>Reverse Words</td>
